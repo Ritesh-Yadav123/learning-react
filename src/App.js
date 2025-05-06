@@ -1,6 +1,8 @@
 // import logo from './logo.svg';
 // import './App.css';
 
+// import React, { useState } from "react"
+
 // import { useState } from "react"
 
 // function App() {
@@ -215,25 +217,74 @@
 // }
 
 
+// continuous change of val on per click
+// import React,{useState} from 'react'
+
+// export default function App() {
+//   let[val,setVal]=useState(1);
+//   function num(){
+//     setVal(val+1);
+//   }
+//   return (
+//     <>
+//     <div>{val}</div>
+//     <button onClick={()=>{
+//       num();
+//     }}>CLIK ME</button>
+//     </>
+//   )
+// }
+
+// 11. add font awesome in react
+
+// import React from 'react'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// // import { faFacebook } from '@fortawesome/free-solid-svg-icons';
+// import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+
+
+// export default function App() {
+//   return (
+//     <div>
+//       <h1>THIS IS Facebook icon <FontAwesomeIcon icon={faFacebook} /></h1>
+//     </div>
+//   )
+// }
+
+
+// 12. if.....else with useState in React
+
+// import React,{useState} from 'react'
+
+// export default function App() {
+//   const[val,Setval]=useState(false);
+//   function change(){
+//     Setval(true);
+//   }
+//   const ter=val?"Ritesh is learning react":"";
+//   return (
+//     <>
+//     <div>CLICK ON THE BUTTON {ter} <button onClick={change}>CLICK ME</button></div>
+//   </>
+//   )
+// }
+
+
+// 13. Using ternary operator
+
 import React,{useState} from 'react'
 
 export default function App() {
-  let[val,setVal]=useState(1);
-  function num(){
-    setVal(val+1);
-    // a++;
-  }
+  const[status,setStatus]=useState(true);
   return (
     <>
-    <div>{val}</div>
+    <div>CLICK THE BUTTON </div>
+    {
+      (status)?"i am displaying":" sorry "
+    }
     <button onClick={()=>{
-      num();
-    }}>CLIK ME</button>
+      setStatus(false);
+    }}>click here to change the value</button>
     </>
   )
 }
-
-
-
-
-
